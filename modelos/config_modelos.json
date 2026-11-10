@@ -1,0 +1,60 @@
+{
+  "features_falta": [
+    "idade",
+    "dias_antecedencia",
+    "mesmo_dia",
+    "dia_semana",
+    "recebeu_lembrete",
+    "n_consultas_anteriores",
+    "faltas_anteriores",
+    "taxa_faltas_anterior",
+    "primeira_consulta"
+  ],
+  "limites_risco": {
+    "baixo_maximo_exclusivo": 0.2,
+    "medio_maximo_inclusivo": 0.35
+  },
+  "niveis_risco": {
+    "baixo": "BAIXO",
+    "medio": "MEDIO",
+    "alto": "ALTO"
+  },
+  "modelo_falta": {
+    "algoritmo": "Regress?o Log?stica",
+    "calibracao": "sigmoide temporal (TimeSeriesSplit, 4 blocos)",
+    "criterio_selecao": "maior ROC-AUC no per?odo de sele??o; desempate por F1 da classe falta; teste final reservado para avalia??o"
+  },
+  "features_perfil": [
+    "idade",
+    "dias_antecedencia_media",
+    "taxa_faltas_anterior",
+    "taxa_lembretes_anterior",
+    "n_consultas_anteriores"
+  ],
+  "perfis": {
+    "0": {
+      "nome": "Histórico de faltas",
+      "estrategia_contato": "Ligação da recepção 48h antes"
+    },
+    "1": {
+      "nome": "Baixo uso de lembretes",
+      "estrategia_contato": "Reforçar confirmação por mensagem"
+    },
+    "2": {
+      "nome": "Acompanhamento recorrente",
+      "estrategia_contato": "Manter confirmação padrão da recepção"
+    }
+  },
+  "agrupamento_perfil": {
+    "algoritmo": "KMeans",
+    "n_grupos": 3,
+    "selecao": "maior silhueta em amostra determinística; cotovelo verificado",
+    "silhueta_amostra": {
+      "2": 0.5515356211204882,
+      "3": 0.5608094268847784,
+      "4": 0.41567813391112174,
+      "5": 0.44660169427965807,
+      "6": 0.45639368344117487
+    }
+  }
+}

@@ -1,0 +1,18 @@
+Global Solution 2026/2 — Vaga Viva
+Turma: 1TDSPV
+
+Integrantes:
+- Fabio Cezare Almeida — RM 572642
+- Guilherme Zanfolim Nunes Farias — RM 570983
+- Jaime Ringel — RM 562044
+- Lucas Monteiro Dias da Costa — RM 571388
+- Mateus Magalhães Romão de Moraes — RM 573371
+
+Fonte dos dados:
+Joni Hoppen, Medical Appointment No Shows, Kaggle, versão 5 (20/08/2017).
+https://www.kaggle.com/datasets/joniarroba/noshowappointments
+Licença indicada pelo Kaggle: CC BY-NC-SA 4.0.
+PatientId é usado apenas durante a preparação local do histórico cronológico.
+Identificadores e colunas de sexo/doenças não são incluídos na base derivada.
+
+URL pública da API Flask: https://vagaviva-ia.onrender.com
